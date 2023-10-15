@@ -33,12 +33,12 @@ div.content {
 
 div.titleScreen > img.left {
     padding: 10px;
-    height: 50px;
+    height: 80px;
     float: left;
 }
 div.titleScreen > img.right {
     padding: 10px;
-    height: 50px;
+    height: 80px;
     float: right;
 }
 
@@ -75,9 +75,6 @@ label.subtitle {
     font-size: 25px;
     font-weight: bold;
 }
-label.normaltext {
-    font-size: 15px;
-}
 
 div.subcontent {
     background-color: #c97d60;
@@ -88,12 +85,6 @@ div.subcontent {
 @font-face {
     font-family: 'Atkinson Hyperlegible';
     src: url('./TTF/Atkinson-Hyperlegible-Regular-102.ttf');
-}
-
-
-@font-face {
-    font-family: 'Atkinson Hyperlegible Bold';
-    src: url('./TTF/Atkinson-Hyperlegible-Bold-102.ttf');
 }
 
 hr {
