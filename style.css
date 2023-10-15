@@ -10,9 +10,11 @@ html, body, head{
     outline: 0;
     background-color: #C7D3DD;
 }
-
+body {
+    position: absolute;
+}
 div.screen {
-    height: 88%;
+    max-height: calc(100% - 120px);
     overflow-y: scroll;
 }
 
@@ -55,7 +57,7 @@ div.titleScreen > label.title {
 
 div.bottomScreen{
     width: 100%;
-    height: 12%;
+    height: 115px;
     position: absolute; 
     bottom: 0;
 }
