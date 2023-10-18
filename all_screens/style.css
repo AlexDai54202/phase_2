@@ -110,3 +110,12 @@ hr {
     text-align:center;
     background:#c97d60;
 }
+
+
+.smallsquare {
+    display:inline-block;
+    width: 30%;
+    height: 100%;
+    text-align:center;
+    background:#c97d60;
+}
