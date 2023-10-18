@@ -1,5 +1,6 @@
 * {
     font-family: 'Atkinson Hyperlegible';
+    font-size: 25px;
 }
 
 html, body, head{
@@ -92,4 +93,19 @@ div.subcontent {
 
 hr {
     border-top: 4px solid black;
+}
+
+
+#modules {
+    height:400px; /* 40px - more place for scrollbar, is hidden under parent box */
+    width: 100%;
+    white-space:nowrap;
+    overflow-x: scroll;
+}
+.module {
+    display:inline-block;
+    width: 40%;
+    height: 100%;
+    text-align:center;
+    background:#c97d60;
 }
