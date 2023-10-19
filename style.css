@@ -50,8 +50,7 @@ div.titleScreen > img.right {
 div.titleScreen > label.title { 
     width: 100%;
     color: #002A32;
-    padding-top: 15px;
-    font-size: 50px;
+    font-size: 75px;
     font-weight: bold;
     display: block;
     text-align: center;
@@ -77,7 +76,7 @@ div.iconholders > img{
 label.subtitle {
     color: #002A32;
     padding-top: 5px;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -98,15 +97,48 @@ hr {
 
 
 #modules {
-    height:400px; /* 40px - more place for scrollbar, is hidden under parent box */
+    height:300px; /* 40px - more place for scrollbar, is hidden under parent box */
     width: 100%;
     white-space:nowrap;
     overflow-x: scroll;
 }
 .module {
     display:inline-block;
-    width: 40%;
+    width: 30%;
     height: 100%;
-    text-align:center;
     background:#c97d60;
+    vertical-align: top;
+}
+
+
+.smallsquare {
+    display:inline-block;
+    width: 30%;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    background:#c97d60;
+}
+
+.paddedsubcontent {
+    background-color: #c97d60;
+    margin-left: 30px; 
+    margin-right: 30px; 
+    overflow-y: scroll;
+    height: calc(100% - 100px);
+    padding: 20px;
+}
+
+li {
+    list-style-position:inside;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+
+
+.bottomtext {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
