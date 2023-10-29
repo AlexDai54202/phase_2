@@ -4,44 +4,410 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "screen">
+    <div class = "screen" style="">
         <div class="titleScreen">
             <img class="left" src="./images/backbutton.png"> </img>
             <img class="right" src="./images/settings.png"> </img>
             <label class="title"> Kitchen Kompanion </label>
         </div>
 
-        <div class="content">
+        <div class="content" style="margin-top: 50px;">
             <label class = "subtitle"> 
-                This is a subtitle in the content border. 
-                The border is here to make the div more visible, 
-                we can remove the border after edits are finished.
+                In My Fridge:
             </label>
-            <div class = "subcontent">
-                <label class = "normaltext"> 
-                    This is normaltext in a subcontent div.
-                </label>
+
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/Fish.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Salmon
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/meat.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Steak
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/dairy.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Yogurt
+                        </label>
+                    </div>
+                    
+                    <div class="smallsquare">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
         
         <div class="content">
+            <label class = "subtitle"> 
+                My Shopping List:
+            </label>
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/Fish.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Trout
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/produce2.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Lettuce
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/produce2.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Apples
+                        </label>
+                    </div>
+                    
+                    <div class="smallsquare">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <label class = "subtitle"> 
+                Recommended Recipes:
+            </label>
+            <div class="content">
+                <div id="modules">
+                    <div class="module">
+                        <img src="./images/spagetti.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Spagetti
+                        </label>
+                    </div>
+                    <div class="module">
+                        <img src="./images/soup.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Soup
+                        </label>
+                    </div>
+                    <div class="module">
+                        <img src="./images/spagetti.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Spagetti
+                        </label>
+                    </div>
+                    <div class="module">
+                        <img src="./images/ADDBUTTON.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                My Household:
+            </label>
+            <div class="content">
+                <div id="modules">
+                    <div class="module" style="text-align: center;">
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext">
+                            Father
+                        </label>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Mother
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Brother
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Sister
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class = "screen" style="display: none;">
+        <div class="titleScreen">
+            <img class="left" src="./images/backbutton.png"> </img>
+            <img class="right" src="./images/settings.png"> </img>
+            <label class="title"> Fridge Contents </label>
+        </div>
+
+        
+        <div class="content"> 
+            <div class="iconholders">
+                <label style="font-size: 60px;font-family: 'Atkinson Hyperlegible';"> List Menu </label>
+                <img src="./images/add-button.png">
+                <img src="./images/subtract.png">
+                <img src="./images/clear.png">
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                Meats:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="modules" style="height:200px">
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                Dairy:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div id="modules" style="height:200px">
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                Poultry:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div id="modules" style="height:200px">
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                Vegetables:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div id="modules" style="height:200px">
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+                <div class="smallsquare">
+                    <label style="font-size: 50px"> x3 </label>
+                    <label class = "bottomtext"> 
+                        Food Item
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class = "screen" style="display: none;">
+        <div class="titleScreen">
+            <img class="left" src="./images/backbutton.png"> </img>
+            <img class="right" src="./images/settings.png"> </img>
+            <label class="title"> Recipe Book </label>
+        </div>
+
+        <div class="content"> 
+            <div class="iconholders">
+                <label style="font-size: 60px;font-family: 'Atkinson Hyperlegible';"> List Menu </label>
+                <img src="./images/add-button.png">
+                <img src="./images/subtract.png">
+                <img src="./images/clear.png">
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                My Recipes:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        <div class="content">
             <div id="modules">
-                <div class="module">
-                    <label class = "normaltext"> 
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext">
                         A
                     </label>
                 </div>
-                <div class="module">
+                <div class="module" style="text-align: center;">
                     <label class = "normaltext"> 
                         B
                     </label>
                 </div>
-                <div class="module">
+                <div class="module" style="text-align: center;">
                     <label class = "normaltext"> 
                         C
                     </label>
                 </div>
-                <div class="module">
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        D
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <label class = "subtitle"> 
+                My Recipes 2:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        <div class="content">
+            <div id="modules">
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext">
+                        A
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        B
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        C
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
                     <label class = "normaltext"> 
                         D
                     </label>
@@ -51,52 +417,366 @@
         
         <div class="content">
             <label class = "subtitle"> 
-                After the vertical space touches the bottom dashboard,
-                we start scrolling down. The scrollable portion
-                includes everything except he bottom dashboard.
+                Shared Recipes:
             </label>
-            <div class = "subcontent">
-                <u1 class = "normaltext"> 
-                    <li>To be honest it took very long for me to
-                        make the CSS work on basically any screen size
-                    </li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                    <li>a</li>
-                </u1>
+        </div>
+        <div class="content">
+            <div id="modules">
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext">
+                        A
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        B
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        C
+                    </label>
+                </div>
+                <div class="module" style="text-align: center;">
+                    <label class = "normaltext"> 
+                        D
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "screen" style="display: none;">
+        <div class="titleScreen">
+            <img class="left" src="./images/backbutton.png"> </img>
+            <img class="right" src="./images/settings.png"> </img>
+            <label class="title"> Shopping List </label>
+        </div>
+
+        <div class="content"> 
+            <div class="iconholders">
+                <label style="font-size: 60px;font-family: 'Atkinson Hyperlegible';"> List Menu </label>
+                <img src="./images/add-button.png">
+                <img src="./images/subtract.png">
+                <img src="./images/clear.png">
             </div>
         </div>
         
+        <div class="content">
+            <label class = "subtitle"> 
+                My List:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        <div class="content">
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            
+        </div>
+        <div class="content">
+            <label class = "subtitle"> 
+                My List 2:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        <div class="content">
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            
+        </div>
+        <div class="content">
+            <label class = "subtitle"> 
+                Shared List:
+            </label>
+            <div class="iconholders" style="width: 60%; float: right; padding: 0; margin: 0;">
+                <img src="./images/add-button.png" style="height: 60px;">
+                <img src="./images/subtract.png" style="height: 60px;">
+                <img src="./images/clear.png" style="height: 60px;">
+            </div>
+        </div>
+        <div class="content">
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            <div class="subcontent">
+                <label class = "subtitle"> 
+                    Food Item:
+                </label>
+                
+                <label class = "subtitle" style="margin-left: 50px;"> 
+                    x3
+                </label>
+                <div class="iconholders" style="width: 30%; float: right; padding: 0; margin: 0; vertical-align: top;">
+                    
+                    <img src="./images/add-button.png" style="height: 60px;">
+                    <img src="./images/subtract.png" style="height: 60px;">
+                    <img src="./images/clear.png" style="height: 60px;">
+                </div>
+            </div>
+            
+        </div>
     </div>
+    
+</div>
+</div>
+    
+</div>
     
     <div class="bottomScreen">
         <hr>
