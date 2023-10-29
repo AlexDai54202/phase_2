@@ -25,7 +25,7 @@ div.content {
     padding: 10px;
     margin: auto;
     margin-bottom: 10px;    
-    border:1px solid black;
+    /*border:1px solid black;*/
     
 }
 
@@ -49,7 +49,7 @@ div.titleScreen > img.right {
 /* label reserved for the top title */
 div.titleScreen > label.title { 
     width: 100%;
-    color: #002A32;
+    color: #002962;
     font-size: 75px;
     font-weight: bold;
     display: block;
@@ -67,16 +67,18 @@ div.iconholders {
     display:flex;
     justify-content: space-between;
     margin: 10px;
+    vertical-align: top;
 }
 div.iconholders > img{
     height: 80px;
     float: left;
     flex-direction: row;
+    vertical-align: top;
 }
 label.subtitle {
-    color: #002A32;
+    color: #002962;
     padding-top: 5px;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
 }
 
@@ -84,6 +86,7 @@ div.subcontent {
     background-color: #c97d60;
     padding: 5px;
     padding-left: 10px;
+    margin-bottom: 10px;
 }
 
 @font-face {
@@ -103,6 +106,7 @@ hr {
     overflow-x: scroll;
 }
 .module {
+    position: relative;
     display:inline-block;
     width: 30%;
     height: 100%;
@@ -142,3 +146,11 @@ li {
     bottom: 0;
     right: 0;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  
