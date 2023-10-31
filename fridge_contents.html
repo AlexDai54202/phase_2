@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "screen">
+        <div class="titleScreen">
+            <img class="left" src="./images/backbutton.png"> </img>
+            <img class="right" src="./images/settings.png"> </img>
+            <label class="title"> Fridge Contents </label>
+        </div>
+
+        <div class="content" style="margin-top: 50px; margin-bottom: 10px;">
+            <label class = "subtitle"> 
+                Freezer:
+            </label>
+
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/Fish.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Salmon
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/meat.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Steak
+                        </label>
+                    </div>
+                    <div class="smallsquare" onclick="load_fridge_contents()">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="content">
+            <label class = "subtitle"> 
+                Refrigerator:
+            </label>
+
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    
+                    <div class="smallsquare">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/dairy.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Yogurt
+                        </label>
+                    </div>
+                    
+                    <div class="smallsquare" onclick="add_content_to_fridge()">
+                        <img src="./images/ADDBUTTON.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Add Item
+                        </label>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+</div>
+</div>
+    
+</div>    
+    <div class="bottomScreen">
+        <hr>
+        <div class="iconholders">
+            <img src="./images/homebutton.png" onclick="goto_home_page()">
+            <img src="./images/listbutton.png" onclick="goto_list_page()">
+            <img src="./images/fridgebutton.png" onclick="goto_fridge_page()">
+            <img src="./images/profilebutton.png" onclick="goto_profile_page()">
+            <img src="./images/bookicon.png" onclick="goto_recipe_page()">
+        </div>
+    </div>
+</body>
+
+</html>

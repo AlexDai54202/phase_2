@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="script.js">
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "screen">
+        <div class="titleScreen">
+            <img class="left" src="./images/backbutton.png"> </img>
+            <img class="right" src="./images/settings.png"> </img>
+            <label class="title"> Kitchen Kompanion </label>
+        </div>
+
+        <div class="content" style="margin-top: 50px;">
+            <label class = "subtitle"> 
+                In My Fridge:
+            </label>
+
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/Fish.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Salmon
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/meat.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Steak
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/dairy.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Yogurt
+                        </label>
+                    </div>
+                    
+                    <div class="smallsquare" onclick="goto_fridge_page()">
+                        <img src="./images/right-arrow.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            See More
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <label class = "subtitle"> 
+                My Shopping List:
+            </label>
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <div class="smallsquare">
+                        <img src="./images/Fish.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Trout
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/produce2.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Lettuce
+                        </label>
+                    </div>
+                    <div class="smallsquare">
+                        <img src="./images/produce2.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            Apples
+                        </label>
+                    </div>
+                    
+                    <div class="smallsquare" onclick="goto_list_page()">
+                        <img src="./images/right-arrow.png" class="center"></img>
+                        <label class = "bottomtext"> 
+                            See More
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <label class = "subtitle"> 
+                Recipes:
+            </label>
+            <div class="content">
+                <div id="modules">
+                    <div class="module">
+                        <img src="./images/spagetti.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Spagetti
+                        </label>
+                    </div>
+                    <div class="module">
+                        <img src="./images/soup.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Soup
+                        </label>
+                    </div>
+                    <div class="module">
+                        <img src="./images/spagetti.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            Spagetti
+                        </label>
+                    </div>
+                    <div class="module" onclick="goto_recipe_page()">
+                        <img src="./images/right-arrow.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext"> 
+                            See More
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle"> 
+                My Household:
+            </label>
+            <div class="content">
+                <div id="modules">
+                    <div class="module" style="text-align: center;">
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                        <label class = "bottomtext">
+                            Father
+                        </label>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Mother
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Brother
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                    <div class="module" style="text-align: center;">
+                        <label class = "bottomtext"> 
+                            Sister
+                        </label>
+                        <img src="./images/person.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                    <div class="module" style="text-align: center;" onclick="goto_profile_page()">
+                        <label class = "bottomtext"> 
+                            See More
+                        </label>
+                        <img src="./images/right-arrow.png" style="width: 100%;padding-top: 20px;"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+    
+</div>
+    <div class="bottomScreen">
+        <hr>
+        <div class="iconholders">
+            <img src="./images/homebutton.png" onclick="goto_home_page()">
+            <img src="./images/listbutton.png" onclick="goto_list_page()">
+            <img src="./images/fridgebutton.png" onclick="goto_fridge_page()">
+            <img src="./images/profilebutton.png" onclick="goto_profile_page()">
+            <img src="./images/bookicon.png" onclick="goto_recipe_page()">
+        </div>
+    </div>
+</body>
+
+</html>
