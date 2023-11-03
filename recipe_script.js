@@ -62,8 +62,7 @@ function submitRecipe(){
     recipeModules.appendChild(newRecipe);
     addRecipeDiv.style.display = "none";
     recipeModules.style.display = "block";
-    recipeArray.push(new Recipe(titleInput, ingredientInput, instructionsInput))
-    console.log(recipeArray);
+    recipeArray.push(new Recipe(titleInput, ingredientInput, instructionsInput));
 }
 
 function editRecipe(div){
@@ -84,7 +83,6 @@ function editRecipe(div){
         div.remove();
         replaceIndex = recipeArray.findIndex(b => b === div);
         recipeArray.splice(replaceIndex, 1);
-        console.log(recipeArray);
     }
     /*bring up the edit popup*/
     editRecipeDiv.style.display = "block";
@@ -120,7 +118,6 @@ function editRecipe(div){
 
 
 function saveRecipe(div, replaceIndex){
-    console.log("ran save?");
     /*grab the new updated values from the div*/
     
     let titleInput = document.getElementById("titleEdit").value;
@@ -146,7 +143,7 @@ function saveRecipe(div, replaceIndex){
         editRecipeDiv.style.display = "none";
         recipeModules.style.display = "block";
     
-    console.log(recipeArray);
+    
     
 
 }
