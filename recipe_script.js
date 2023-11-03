@@ -18,6 +18,16 @@ Recipe.prototype = {
 let recipeArray = [new Recipe("Spaghetti", "Bla", "BlaBla")];
 
 function addNewRecipe(){
+    cancelBtn = document.getElementById("addCancel");
+    cancelBtn.onclick = function(){
+        addRecipeDiv.style.display = "none";
+        recipeModules.style.display = "block";
+        document.getElementById("titleInput").value = "";
+        document.getElementById("ingredientInput").value = "";
+        document.getElementById("instructionsInput").value ="";
+        return;
+    }
+
     addRecipeDiv.style.display = "block";
     recipeModules.style.display = "none";
     let submitBtn = document.getElementById("submitRecipe");
@@ -30,7 +40,7 @@ function submitRecipe(){
 
     /*add this attribute so the div can be edited*/
     newRecipe.onclick = function(){
-        editRecipe(newRecipe)
+        editRecipe(newRecipe);
     }
     //newRecipe.setAttribute("onclick", editRecipe(newRecipe));
 
@@ -57,6 +67,25 @@ function submitRecipe(){
 }
 
 function editRecipe(div){
+    cancelBtn = document.getElementById("editCancel");
+    cancelBtn.onclick = function(){
+        editRecipeDiv.style.display = "none";
+        recipeModules.style.display = "block";
+        document.getElementById("titleEdit").value = "";
+        document.getElementById("ingredientEdit").value = "";
+        document.getElementById("instructionsEdit").value ="";
+        return;
+    }
+
+    deleteBtn = document.getElementById("deleteBtn");
+    deleteBtn.onclick = function(){
+        editRecipeDiv.style.display = "none";
+        recipeModules.style.display = "block";
+        div.remove();
+        replaceIndex = recipeArray.findIndex(b => b === div);
+        recipeArray.splice(replaceIndex, 1);
+        console.log(recipeArray);
+    }
     /*bring up the edit popup*/
     editRecipeDiv.style.display = "block";
     recipeModules.style.display = "none";
@@ -80,7 +109,7 @@ function editRecipe(div){
         }
     })
 
-    console.log(replaceIndex);
+    
 
     document.getElementById('submitEdit').onclick = function(){
         saveRecipe(div, replaceIndex);
