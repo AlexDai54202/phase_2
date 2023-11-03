@@ -46,8 +46,11 @@
                 <label class="addLabels" for="instructionsInput">Instructions</label>
                 <input type="textarea" id="instructionsInput" placeholder="Add Instructions Here">
                 <br>
-                <input type="button" id="submitRecipe" value="Add Recipe">
-                <input type="reset" value="Reset" id="addReset">
+                <div class="buttons">
+                    <input type="button" id="submitRecipe" value="Add Recipe">
+                    <input type="reset" value="Reset" id="addReset">
+                    <input type="button" value="Cancel" id="addCancel">
+                </div>
             </form>
         </div>
 
@@ -63,8 +66,12 @@
                 <label class="editLabels" for="instructionsEdit">Instructions</label>
                 <input type="text" id="instructionsEdit">
                 <br>
-                <input type="button" id="submitEdit" value="Save Recipe" >
-                <input type="reset" value="Reset">
+                <div class="buttons">
+                    <input type="button" id="submitEdit" value="Save Recipe" >
+                    <input type="reset" id="editReset" value="Reset">
+                    <input type="button" value="Delete" id="deleteBtn">
+                    <input type="button" value="Cancel" id="editCancel">
+                </div>
             </form>
         </div>
     </div>
