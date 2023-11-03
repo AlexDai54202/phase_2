@@ -285,3 +285,73 @@ div.titleScreen > button.right img {
     height: 300px;
     display: block;
 }
+
+.buttons{
+    display:flex;
+    justify-content: center;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+#submitRecipe{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#addReset{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#addCancel{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#submitEdit{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#editReset{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#deleteBtn{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
+
+#editCancel{
+    padding: 15px 30px;
+    font-size: 30px;
+    background-color: #002962;
+    border-radius: 12px;
+    color:#C7D3DD;
+    margin:auto;
+}
