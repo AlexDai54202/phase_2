@@ -15,13 +15,14 @@ Recipe.prototype = {
     constructor: Recipe
 }
 
-let recipeArray = [new Recipe("Spaghetti", "Bla", "BlaBla")];
+let recipeArray = [new Recipe("Spaghetti", "Bla", "BlaBla"), new Recipe("Chicken Alfredo", "BlaHEHE", "BlaBlaHEHE")];
 
 function addNewRecipe(){
-    cancelBtn = document.getElementById("addCancel");
+    let cancelBtn = document.getElementById("addCancel");
+    let recipeCard = document.getElementById("recipeCard");
     cancelBtn.onclick = function(){
         addRecipeDiv.style.display = "none";
-        recipeModules.style.display = "block";
+        recipeCard.style.display = "block";
         document.getElementById("titleInput").value = "";
         document.getElementById("ingredientInput").value = "";
         document.getElementById("instructionsInput").value ="";
@@ -40,7 +41,7 @@ function submitRecipe(){
 
     /*add this attribute so the div can be edited*/
     newRecipe.onclick = function(){
-        editRecipe(newRecipe);
+        showRecipeCard(newRecipe);
     }
     //newRecipe.setAttribute("onclick", editRecipe(newRecipe));
 
@@ -62,14 +63,17 @@ function submitRecipe(){
     recipeModules.appendChild(newRecipe);
     addRecipeDiv.style.display = "none";
     recipeModules.style.display = "block";
-    recipeArray.push(new Recipe(titleInput, ingredientInput, instructionsInput));
+    recipeArray.push(new Recipe(titleInput, ingredientInput, instructionsInput))
+    console.log(recipeArray);
 }
 
 function editRecipe(div){
+    let recipeCard = document.getElementById("recipeCard");
     cancelBtn = document.getElementById("editCancel");
     cancelBtn.onclick = function(){
         editRecipeDiv.style.display = "none";
         recipeModules.style.display = "block";
+        recipeCard.style.display = "none";
         document.getElementById("titleEdit").value = "";
         document.getElementById("ingredientEdit").value = "";
         document.getElementById("instructionsEdit").value ="";
@@ -80,13 +84,17 @@ function editRecipe(div){
     deleteBtn.onclick = function(){
         editRecipeDiv.style.display = "none";
         recipeModules.style.display = "block";
+        recipeCard.style.display = "none";
         div.remove();
         replaceIndex = recipeArray.findIndex(b => b === div);
         recipeArray.splice(replaceIndex, 1);
+        console.log(recipeArray);
     }
+    
+   
     /*bring up the edit popup*/
     editRecipeDiv.style.display = "block";
-    recipeModules.style.display = "none";
+    recipeCard.style.display = "none";
     let replaceIndex;
 
     
@@ -118,6 +126,7 @@ function editRecipe(div){
 
 
 function saveRecipe(div, replaceIndex){
+    console.log("ran save?");
     /*grab the new updated values from the div*/
     
     let titleInput = document.getElementById("titleEdit").value;
@@ -139,13 +148,46 @@ function saveRecipe(div, replaceIndex){
 
 
     /*append the new recipe module to the list of modules*/
+    let recipeCard = document.getElementById("recipeCard");
     
-        editRecipeDiv.style.display = "none";
-        recipeModules.style.display = "block";
+    editRecipeDiv.style.display = "none";
+    recipeCard.style.display = "block";
     
-    
+    console.log(recipeArray);
     
 
 }
 
+function showRecipeCard(div){
+    let recipeCard = document.getElementById("recipeCard");
+    let editBtn = document.getElementById("editButton");
+    editBtn.onclick = function(){
+        editRecipe(div);
+    }
+    
+    recipeCard.style.display = "block";
+    recipeModules.style.display ="none";
+    recipeArray.forEach(a => {
+        if (a.title === div.getElementsByTagName("label")[0].textContent){
+            document.getElementById("showTitle").innerHTML = a.title;
+            document.getElementById("showIngredients").innerHTML = a.ingredients;
+            document.getElementById("showInstructions").innerHTML = a.instructions;
+        }
+    })
+
+
+    
+}
+
+function backBtn(){
+    let recipeCard = document.getElementById("recipeCard");
+    
+    recipeCard.style.display = "none";
+    recipeModules.style.display ="block";
+    document.getElementById("showTitle").innerHTML = "";
+    document.getElementById("showIngredients").innerHTML = "";
+    document.getElementById("showInstructions").innerHTML = "";
+
+    console.log("ran");
+}
 
