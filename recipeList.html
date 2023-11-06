@@ -15,19 +15,19 @@
 
     <div class="content" style="margin-top: 50px;">
         <div id="recipeModules">
-            <div class="recipeModule" onclick="editRecipe(this)">
+            <div class="recipeModule" onclick="showRecipeCard(this)">
                 <label class="recipeName">Spaghetti</label>
                 <img class= "recipePics" src="./images/spagetti.png">
                 <p class="ingredients"></p>
                 <p class="instructions"></p>
             </div>
-            <div class="recipeModule" onclick="editRecipe(this)">
+            <div class="recipeModule" onclick="showRecipeCard(this)">
                 <label class="recipeName">Chicken Alfredo</label>
                 <img class= "recipePics" src="./images/poultry.png">
                 <p class="ingredients"></p>
                 <p class="instructions"></p>
             </div>
-            <div class="recipeModule" onclick="editRecipe(this)">
+            <div class="recipeModule" onclick="showRecipeCard(this)">
                 <label class="recipeName">Greek Salad</label>
                 <img class= "recipePics" src="./images/produce.png">
                 <p class="ingredients"></p>
@@ -73,6 +73,15 @@
                     <input type="button" value="Cancel" id="editCancel">
                 </div>
             </form>
+        </div>
+        <div id= "recipeCard">
+            <h1 id="showTitle"></h1>
+            <label id="ingredientTitle">Ingredients</label>
+            <p id="showIngredients"></p>
+            <label id="instructionsTitle">Instructions</label>
+            <p id="showInstructions"></p>
+            <button id="backButton" onclick="backBtn()">Back</button>
+            <button id="editButton">Edit Recipe</button>
         </div>
     </div>
 
