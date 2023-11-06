@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="recipe_style.css">
+    <script src="recipe_script.js" defer></script> 
+</head>
+<body>
+    <div class="titleScreen">
+        <img class="left" src="./images/backbutton.png"> </img>
+        <button class="right" id="addRecipeBtn" >
+            <img class="right" src="./images/ADDBUTTON.png"/>
+        </button>
+        <label class="title"> My Recipes</label>
+    </div>
+
+    <div class="content" style="margin-top: 50px;">
+        <div id="recipeModules">
+            <div class="recipeModule" onclick="showRecipeCard(this)">
+                <label class="recipeName">Spaghetti</label>
+                <img class= "recipePics" src="./images/spagetti.png">
+                <p class="ingredients"></p>
+                <p class="instructions"></p>
+            </div>
+            <div class="recipeModule" onclick="showRecipeCard(this)">
+                <label class="recipeName">Chicken Alfredo</label>
+                <img class= "recipePics" src="./images/poultry.png">
+                <p class="ingredients"></p>
+                <p class="instructions"></p>
+            </div>
+            <div class="recipeModule" onclick="showRecipeCard(this)">
+                <label class="recipeName">Greek Salad</label>
+                <img class= "recipePics" src="./images/produce.png">
+                <p class="ingredients"></p>
+                <p class="instructions"></p>
+            </div>
+        </div>
+        <div class="addRecipe">
+            <h1 id="addHeading">Add New Recipe</h1>
+            <form>
+                <label class="addLabels" for="titleInput">Title</label>
+                <input type="text" id="titleInput">
+                <br>
+                <label class="addLabels" for="ingredientInput">Ingredients</label>
+                <input type="text" id="ingredientInput" placeholder="Add Ingredients Here">
+                <br>
+                <label class="addLabels" for="instructionsInput">Instructions</label>
+                <input type="textarea" id="instructionsInput" placeholder="Add Instructions Here">
+                <br>
+                <div class="buttons">
+                    <input type="button" id="submitRecipe" value="Add Recipe">
+                    <input type="reset" value="Reset" id="addReset">
+                    <input type="button" value="Cancel" id="addCancel">
+                </div>
+            </form>
+        </div>
+
+        <div class="editRecipe">
+            <form>
+                <h1 id="addHeading">Edit Recipe</h1>
+                <label class="editLabels" for="titleEdit">Title</label>
+                <input type="text" id="titleEdit">
+                <br>
+                <label class="editLabels" for="ingredientEdit">Ingredients</label>
+                <input type="text" id="ingredientEdit">
+                <br>
+                <label class="editLabels" for="instructionsEdit">Instructions</label>
+                <input type="text" id="instructionsEdit">
+                <br>
+                <div class="buttons">
+                    <input type="button" id="submitEdit" value="Save Recipe" >
+                    <input type="reset" id="editReset" value="Reset">
+                    <input type="button" value="Delete" id="deleteBtn">
+                    <input type="button" value="Cancel" id="editCancel">
+                </div>
+            </form>
+        </div>
+        <div id= "recipeCard">
+            <h1 id="showTitle"></h1>
+            <label id="ingredientTitle">Ingredients</label>
+            <p id="showIngredients"></p>
+            <label id="instructionsTitle">Instructions</label>
+            <p id="showInstructions"></p>
+            <button id="backButton" onclick="backBtn()">Back</button>
+            <button id="editButton">Edit Recipe</button>
+        </div>
+    </div>
+
+    <div class="bottomScreen">
+        <hr>
+        <div class="iconholders">
+            <img src="./images/homebutton.png">
+            <img src="./images/listbutton.png">
+            <img src="./images/fridgebutton.png">
+            <img src="./images/profilebutton.png">
+            <img src="./images/bookicon.png">
+        </div>
+    </div>
+</body>
+</html>
