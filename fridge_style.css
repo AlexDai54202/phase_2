@@ -206,3 +206,11 @@ li {
     text-decoration: none;
     cursor: pointer;
 }
+.modal-text { 
+    width: 100%;
+    color: #002962;
+    font-size: 75px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}

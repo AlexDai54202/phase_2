@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fridge_style.css">
 </head>
 <body>
     <div class = "screen">
@@ -18,7 +18,7 @@
 
             <div class="content" id="content0">
                 <div id="modules" style="height:200px">
-                    <div class="smallsquare" onclick="load_fridge_contents()">
+                    <div class="smallsquare"  onclick="add_content_to_fridge(0)">
                         <img src="./images/ADDBUTTON.png" class="center"></img>
                         <label class = "bottomtext"> 
                             Add Item
@@ -35,7 +35,7 @@
 
             <div class="content" id="content1">
                 <div id="modules" style="height:200px">
-                    <div class="smallsquare">
+                    <div class="smallsquare" onclick="add_content_to_fridge(1)">
                         <img src="./images/ADDBUTTON.png" class="center"></img>
                         <label class = "bottomtext"> 
                             Add Item
@@ -45,8 +45,7 @@
             </div>
             <div class="content" id="content2">
                 <div id="modules" style="height:200px">
-                    
-                    <div class="smallsquare">
+                    <div class="smallsquare" onclick="add_content_to_fridge(2)">
                         <img src="./images/ADDBUTTON.png" class="center"></img>
                         <label class = "bottomtext"> 
                             Add Item
@@ -56,7 +55,7 @@
             </div>
             <div class="content" id="content3">
                 <div id="modules" style="height:200px">
-                    <div class="smallsquare" onclick="add_content_to_fridge()">
+                    <div class="smallsquare" onclick="add_content_to_fridge(3)">
                         <img src="./images/ADDBUTTON.png" class="center"></img>
                         <label class = "bottomtext"> 
                             Add Item
@@ -82,15 +81,35 @@
 </div>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
-
+<div id="myModal" class="modal" style="display: none;">
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
+        <img src="./images/dairy.png" class="center" style="width: 50%;"></img>
+        <label class="modal-text"> Choose Icon </label>
+        
+        
+        <div class="iconholders">
+        <img src="./images/add-button.png" onclick="ERROR()">
+        <label class="modal-text"> 999 </label>
+        <img src="./images/subtract.png" onclick="ERROR()"> 
+        </div>
     </div>
-  
-  </div>  
+  </div>
+</body>
+
+
+<div id="myModal" class="modal" style="display: block;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <img src="./images/dairy.png" class="center" style="width: 50%;"></img>
+      <label class="modal-text"> TEST </label>
+        <div class="iconholders">
+        <img src="./images/add-button.png" onclick="ERROR()">
+        <label class="modal-text"> 999 </label>
+        <img src="./images/subtract.png" onclick="ERROR()"> 
+        </div>
+    </div>
+  </div>
 </body>
 
 <script src="fridge_contents.js"></script>

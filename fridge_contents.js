@@ -41,7 +41,6 @@ class foodItem {
     }
 }
 
-localStorage.clear()
 let FRIDGE_CONTENTS = []
 if (localStorage.getItem("Initialized") == null) {
     initialize()
@@ -69,7 +68,6 @@ function load_fridge_contents(FRIDGE_CONTENTS) {
 
     let i = 0
     while (i < FRIDGE_CONTENTS.length) {
-        console.log(FRIDGE_CONTENTS[i].name);
         var lab = document.createElement("label");
         lab.className = "bottomtext"
         lab.textContent = FRIDGE_CONTENTS[i].name + " - " + FRIDGE_CONTENTS[i].amount;
@@ -82,7 +80,7 @@ function load_fridge_contents(FRIDGE_CONTENTS) {
         div.className="smallsquare"
         div.appendChild(img)
         div.appendChild(lab)
-
+        div.setAttribute('onclick',"open_editor(\""+FRIDGE_CONTENTS[i].name+"\", "+FRIDGE_CONTENTS[i].amount+", "+FRIDGE_CONTENTS[i].position+")")
         modules_div = document.querySelector(".content #content"+FRIDGE_CONTENTS[i].position).childNodes[1]
         
         modules_div.insertBefore(div,modules_div.childNodes[0])
@@ -90,12 +88,65 @@ function load_fridge_contents(FRIDGE_CONTENTS) {
     }
 }
 
-function open_editor(name, layer, amount, is_add_new=false) {
-    if (is_add_new) {
-        // TODO: Add new item to fridge.
+function open_editor(name, amt, layer) {
+    console.log(name, amt, layer)
+    let i = 0;
+    let item = -1;
+    while(i<FRIDGE_CONTENTS.length) {
+        if (FRIDGE_CONTENTS[i].name == name && FRIDGE_CONTENTS[i].position == layer) {
+            item = i
+            break;
+        }
+        i++;
     }
+    modal.children[0].children[0].src = FRIDGE_CONTENTS[item].icon;
+    modal.children[0].children[1].textContent = FRIDGE_CONTENTS[item].name;
+    modal.children[0].children[2].children[1].textContent = FRIDGE_CONTENTS[item].amount;
+
+    modal.children[0].children[2].children[0].setAttribute('onclick',"add_item(\"" + name + "\","+layer+"," + 1 + ")");
+    modal.children[0].children[2].children[2].setAttribute('onclick',"add_item(\"" + name + "\","+layer+"," + -1 + ")");
+    
+    modal.style.display = "block";
+    
+    //todo: edit onclick for + and - icons.
+    
+
+    console.log(item)
 }
 
+function add_item(name, layer, amt) {
+    let i = 0;
+    let item = -1;
+    while(i<FRIDGE_CONTENTS.length) {
+        if (FRIDGE_CONTENTS[i].name == name && FRIDGE_CONTENTS[i].position == layer) {
+            item = i
+            break;
+        }
+        i++;
+    }
+    FRIDGE_CONTENTS[item].amount+=amt;
+    modal.children[0].children[2].children[1].textContent = FRIDGE_CONTENTS[item].amount;
+}
+
+var modal = document.getElementById("myModal");
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      
+      // todo: update localstorage with fridge data, refresh page.
+      location.reload();
+    }
+    FRIDGE_CONTENTS = FRIDGE_CONTENTS.filter(function (entry) {
+        return entry.amount > 0;
+    })
+    localStorage.setItem("Fridge_Contents",JSON.stringify(FRIDGE_CONTENTS))
+}
+
+
+function add_content_to_fridge(layer) {
+    modal.style.display = "block";
+}  
 
 
 // This is the script for the bottom dashboard
