@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" href="list_style.css">
 </head>
-<body style="background-color: #2c2a4a;">
+<body style="background-color: #2c2a4a; overflow-y: scroll;" >
     <div class="screen">
         <div class="titleScreen first-div">
             <img class="left" src="./images/backbutton.png"> </img>
@@ -13,19 +13,16 @@
     </div>
 
     <div class="containter">
-        <!-- <div class="todoBlock"> -->
-            <div class="content second-div outer">
+            <div class="content second-div">
                 <label class="subtitle">
                     My Shopping List:
                 </label>
-        <!-- </div> -->
         <div class="todoList" style="margin-top: 50px;">
             <!-- list holder -->
             <div class="listHolder">
               <ul class="list">
                 <li>
                   <span class="listName">Carrots</span> 
-                  <img class="left" src="./images/delete.png" width="20" height="20"> </img>
                 </li>
                 <li>
                   <span class="listName">Green Peppers</span>
@@ -49,6 +46,9 @@
         <div class="col" style="margin-left: 50px; margin-top: 10px;">
           <button type="button" id="addBtn" class="btn-primary">Add Item</button>
         </div>
+        <div class="col">
+            <button type="button" id="toggleBtn" class="btn-primary">Hide List</button>
+          </div>
       </div>
     </div>
   </div>
