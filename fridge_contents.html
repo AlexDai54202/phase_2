@@ -98,16 +98,38 @@
 </body>
 
 
-<div id="myModal" class="modal" style="display: block;">
+<div id="myModal1" class="modal" style="display: block;text-align:center">
     <!-- Modal content -->
     <div class="modal-content">
-      <img src="./images/dairy.png" class="center" style="width: 50%;"></img>
-      <label class="modal-text"> TEST </label>
+        <label class="modal-text"> Icon </label>
+        <div id="modules" style="height:200px">
+            <div class="smallsquare"  onclick="select(0)">
+                <img src="./images/dairy.png" class="center"></img>
+            </div>
+            <div class="smallsquare"  onclick="select(0)">
+                <img src="./images/Fish.png" class="center"></img>
+            </div>
+            <div class="smallsquare"  onclick="select(0)">
+                <img src="./images/meat.png" class="center"></img>
+            </div>
+            <div class="smallsquare"  onclick="select(0)">
+                <img src="./images/produce.png" class="center"></img>
+            </div>
+            <div class="smallsquare"  onclick="select(0)">
+                <img src="./images/wine.png" class="center"></img>
+            </div>
+        </div>
+      <label class="modal-text" style="align-self: center;"> Name </label>
+      <input class = "input" style="width: 100%; height: 50px;"> </input>
+      <label class="modal-text"> Quantity </label>
         <div class="iconholders">
         <img src="./images/add-button.png" onclick="ERROR()">
-        <label class="modal-text"> 999 </label>
+        <label class="modal-text"> 0 </label>
         <img src="./images/subtract.png" onclick="ERROR()"> 
         </div>
+    </div>
+    <div class="modal-content">
+        <label class="modal-text"> Submit </label>
     </div>
   </div>
 </body>
