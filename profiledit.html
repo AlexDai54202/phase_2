@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="prostyle.css">
+<script src="editscript.js"></script>
+</head>
+<body>
+    <div class = "screen">
+        <div class="titleScreen">
+    
+            <img class="left" src="./images/profilecircle.png"> </img>
+            <img class="right" src="./images/edit.png"> </img>
+            
+            
+            <input type="text" id="nameIn" class="nameIn">
+            <div class="cooking-level">
+                <label class="level" for="cook-level"> Cooking Level: </label>
+                <select class="opts" name="cook-level" id="cooklevel">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="content" style="margin-top: 50px;">
+            <label class = "subtitle"> 
+                About Me:
+            </label>
+            
+
+            <div class="content">
+                <div id="modules" style="height:200px">
+                    <label class = "contact-info-e" for="email"> 
+                        Email: 
+                    </label>
+                    <input type="email" id="emailIn" name="email">
+
+                    <br>
+                    <br>
+                    <label class = "contact-info-e" for="phone"> 
+                        Phone Number: 
+                    </label>
+                    <input type="tel" id="phoneIn" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+                    <br>
+                    <br>
+                    <label class="contact-info-e" for= "diet"> 
+                        Dietary Restrictions:
+                    </label>
+                    <br>
+                    <br>
+
+
+
+                    <div class="checkbox-cont1">
+                        <input type="checkbox" id="./images/peanut-free.png" name="checkbox1">
+                        <label for="checkbox1">Nuts</label>
+                    
+                        <input type="checkbox" id="./images/soy-free.png" name="checkbox2">
+                        <label for="checkbox2">Soy</label>
+
+                        <input type="checkbox" id="./images/gluten-free.png" name="checkbox3">
+                        <label for="checkbox3">Wheat (Gluten)</label>
+                    </div>
+                    <br>
+                    <div class="checkbox-cont1">
+                        <input type="checkbox" id="./images/no-egg.png" name="checkbox4">
+                        <label for="checkbox4">Eggs</label>
+                    
+                        <input type="checkbox" id="./images/no-fish.png" name="checkbox5">
+                        <label for="checkbox5">Fish</label>
+
+                        <input type="checkbox" id="./images/no-seafood.png" name="checkbox6">
+                        <label for="checkbox6">Shellfish</label>
+                    </div>
+
+                    <br>
+                    <div class="checkbox-cont1">
+                        <input type="checkbox" id="./images/lactose-free.png" name="checkbox7">
+                        <label for="checkbox7">Lactose</label>
+                    
+                        <input type="checkbox" id="./images/kosher.png" name="checkbox8">
+                        <label for="checkbox8">Kosher</label>
+
+                        <input type="checkbox" id="./images/halal.png" name="checkbox9">
+                        <label for="checkbox9">Halal</label>
+                    </div>
+
+                    <br>
+                    <div class="checkbox-cont1">
+                        <input type="checkbox" id="./images/vegan.png" name="checkbox10">
+                        <label for="checkbox7">Vegan</label>
+                    
+                        <input type="checkbox" id="./images/veggie.png" name="checkbox11">
+                        <label for="checkbox8">Vegetarian</label>
+
+                        <input type="checkbox" id="./images/keto.png" name="checkbox12">
+                        <label for="checkbox9">Keto</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="content">
+            <label class = "subtitle"> 
+                Saved Recipes:
+            </label>
+            <div class="content">
+                <div id="modules">
+                    <div class="module" style="text-align: center;"">
+                        <label class = "bottomtext"> 
+                            Spaghetti
+                        </label>
+                        <img src="./images/spagetti.png" style="width: 80%;padding-top: 20px;"></img>
+                        
+                    </div>
+                    <div class="module" style="text-align: center;"">
+                        <label class = "bottomtext"> 
+                            Chicken Alfredo
+                        </label>
+                        <img src="./images/poultry.png" style="width: 80%;padding-top: 20px;"></img>
+                        
+                    </div>
+                    <div class="module" style="text-align: center;"">
+                        <label class = "bottomtext"> 
+                            Greek Salad
+                        </label>
+                        <img src="./images/produce.png" style="width: 80%;padding-top: 20px;"></img>
+                        
+                    </div>
+                    <div class="module" style="text-align: center;"">
+                        <label class = "bottomtext"> 
+                            Sweet Potato Pie
+                        </label>
+                        <img src="./images/cake.png" style="width: 80%;padding-top: 20px;"></img>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <label class = "subtitle" style="margin-right: 20px;"> 
+                My Household: 
+            </label>
+            <input type="radio" style="height:30px; width:30px; margin-right: 10px;" id="home" name="houseType" value="Home"><label class="contact-info-e" for="home">Home</label>
+            <input type="radio" style="height:30px; width:30px; margin-right: 10px;" id="school" name="houseType" value="School"><label class="contact-info-e" for="school">School</label>
+
+            <div class="content">
+                <div id="modules2">
+
+                </div>
+
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close"></span>
+                      <label class = "subtitle" style="margin-right: 20px; text-align: center;">Add A Household Member:</label>
+                      <br>
+                      <br>
+                      <label class = "contact-info-e" for="memName" style="margin-right: 25px;">Name:</label><input style="margin-right: 25px; height: 35px;" type="text" id="memName" name="memName">
+                     
+                      <button id="submitMem" onclick="addMem()">Submit</button>
+                      
+                    </div>
+                  
+                  </div>
+                
+            </div>
+
+        </div>
+        <div class="content" style="height: 320px">
+            <label class = "subtitle" style="margin-left: 20px;"> 
+                Settings:
+            </label>
+
+            <div class="content">
+                <div id="modules">
+                    <br>
+                    <label class = "contact-info" id="notifications">Notifications: </label>
+                    <input type="radio" style="height:30px; width:30px; margin-right: 10px;" id="on" name="nots" value="On"><label class="contact-info-e" for="on">On</label>
+                    <input type="radio" style="height:30px; width:30px; margin-right: 10px;" id="off" name="nots" value="Off"><label class="contact-info-e" for="off">Off</label>
+
+                    
+                    <br>
+                    <br>
+                    <label class = "contact-info" id="notifications">About</label>
+                    <br>
+                    <br>
+                    <label class = "contact-info" id="notifications">Help</label>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="submit">
+            
+            <a href="profile.html"><button id="sub" style="color: green;" onclick="updateVals()">Submit</button></a>
+
+            <a href="profile.html"><button style="color: red;">Cancel</button></a>
+        
+        </div>
+        
+        
+    </div>
+    
+    <div class="bottomScreen">
+        <hr>
+        <div class="iconholders">
+            <img src="./images/homebutton.png">
+            <img src="./images/listbutton.png">
+            <img src="./images/fridgebutton.png">
+            <img src="./images/profilebutton.png"  >
+            <img src="./images/bookicon.png">
+        </div>
+    </div>
+</body>
+
+</html>
