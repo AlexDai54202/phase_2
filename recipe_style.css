@@ -18,6 +18,7 @@ body {
 div.screen {
     max-height: calc(100% - 120px);
     overflow-y: scroll;
+    margin:auto;
 }
 
 div.content {
@@ -41,6 +42,7 @@ div.titleScreen > img.left {
     height: 80px;
     float: left;
 }
+
 div.titleScreen > img.right {
     padding: 10px;
     height: 80px;
@@ -169,7 +171,6 @@ li {
   
 /*Added Stuff*/
 #recipeModules{
-    position:relative;
     width: 100%;
     overflow-y:scroll;
 }
@@ -242,7 +243,7 @@ div.titleScreen > button.right img {
 
 
 
-#addHeading{
+.addHeading{
     display:flex;
     justify-content: center;
     color: #002962;
@@ -372,7 +373,7 @@ div.titleScreen > button.right img {
 
 #showTitle{
     color: #002962;
-    font-size: 35px;
+    font-size: 55px;
     font-weight: bold;
     display:flex;
     justify-content: center;
@@ -392,3 +393,35 @@ div.titleScreen > button.right img {
     margin:auto;
 }
 
+#vegRecipes{
+    width: 100%;
+    overflow-y:scroll;
+    display: none;
+    background-color: #C7D3DD;
+}
+
+#janesFaves{
+    width: 100%;
+    overflow-y:scroll;
+    display: none;
+    background-color: #C7D3DD;
+}
+
+#filterMenu{
+    display: none;
+    background-color: #C7D3DD;
+    color:#002962;
+}
+
+#filterBtn{
+    height: 80px;
+    float: left;
+    border: none;
+    background: none;
+}
+
+div.titleScreen > button.left img {
+    padding: 10px;
+    height: 80px;
+    float: left;
+}
