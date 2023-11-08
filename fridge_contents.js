@@ -31,6 +31,7 @@ class foodItem {
         this.icon = icon.icon;
         this.amount = amount;
         this.position = position;
+        this.date_of_purchase = "2023-11-07"
     }
     
     removeamount(amt) {
@@ -106,12 +107,31 @@ function open_editor(name, amt, layer) {
     modal.children[0].children[2].children[0].setAttribute('onclick',"add_item(\"" + name + "\","+layer+"," + 1 + ")");
     modal.children[0].children[2].children[2].setAttribute('onclick',"add_item(\"" + name + "\","+layer+"," + -1 + ")");
     
+    modal.children[1].children[0].setAttribute('onclick',"remove_item(\"" + name + "\","+layer+")");
+
     modal.style.display = "block";
-    
-    //todo: edit onclick for + and - icons.
     
 
     console.log(item)
+}
+
+function remove_item(name, layer) {
+    let i = 0;
+    let item = -1;
+    while(i<FRIDGE_CONTENTS.length) {
+        if (FRIDGE_CONTENTS[i].name == name && FRIDGE_CONTENTS[i].position == layer) {
+            item = i
+            break;
+        }
+        i++;
+    }
+    FRIDGE_CONTENTS[item].amount = 0;
+    
+    FRIDGE_CONTENTS = FRIDGE_CONTENTS.filter(function (entry) {
+        return entry.amount > 0;
+    })
+    localStorage.setItem("Fridge_Contents",JSON.stringify(FRIDGE_CONTENTS));
+    location.reload();
 }
 
 function add_item(name, layer, amt) {
@@ -129,23 +149,65 @@ function add_item(name, layer, amt) {
 }
 
 var modal = document.getElementById("myModal");
+var modal1 = document.getElementById("myModal1");
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      
-      // todo: update localstorage with fridge data, refresh page.
-      location.reload();
-    }
     FRIDGE_CONTENTS = FRIDGE_CONTENTS.filter(function (entry) {
         return entry.amount > 0;
     })
+    localStorage.setItem("Fridge_Contents",JSON.stringify(FRIDGE_CONTENTS));
+    
+    if (event.target == modal || event.target == modal1) {
+        modal.style.display = "none";
+        
+        // todo: update localstorage with fridge data, refresh page.
+        location.reload();
+    }
+}
+
+function increase(amount) {
+    modal1.children[0].children[5].children[1].textContent = parseInt(modal1.children[0].children[5].children[1].textContent) + amount;
+}
+function select_icon(enu) {
+    console.log("select icon "+modal1.children[0].children[1].children.length)
+    let i = 0;
+    while (i < modal1.children[0].children[1].children.length) {
+        if (i == enu) {
+            console.log("select icon HERE")
+            modal1.children[0].children[1].children[i].style.backgroundColor = '#90EE90';
+        } else {
+            modal1.children[0].children[1].children[i].style.backgroundColor = ''
+        }
+        i++;
+    }
+}
+
+function sumbit_form() {
+    let i = 0;
+    let icon = "";
+    while (i < modal1.children[0].children[1].children.length) {
+        if (modal1.children[0].children[1].children[i].style.backgroundColor != '') {
+            icon = modal1.children[0].children[1].children[i].children[0].getAttribute("src")
+            break;
+        }
+        i++;
+    }
+    amount = parseInt(modal1.children[0].children[5].children[1].textContent);
+    item_name = modal1.children[0].children[3].value;
+    
+    if (amount > 0) {
+        FRIDGE_CONTENTS.push(new foodItem(item_name, {'icon':icon}, amount, LAYER_TO_ADD));
+    }
     localStorage.setItem("Fridge_Contents",JSON.stringify(FRIDGE_CONTENTS))
+    location.reload();
 }
 
 
+
+var LAYER_TO_ADD = 0;
 function add_content_to_fridge(layer) {
-    modal.style.display = "block";
+    modal1.style.display = "block";
+    LAYER_TO_ADD = layer
 }  
 
 
@@ -169,3 +231,4 @@ function goto_recipe_page() {
 
 
 load_fridge_contents(FRIDGE_CONTENTS);
+
