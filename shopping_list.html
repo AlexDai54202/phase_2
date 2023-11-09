@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="list_style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body style="background-color: #2c2a4a; overflow-y: scroll;" >
     <div class="screen">
@@ -17,7 +18,7 @@
                 <label class="subtitle">
                     My Shopping List:
                 </label>
-        <div class="todoList" style="margin-top: 50px;">
+     
             <!-- list holder -->
             <div class="listHolder">
               <ul class="list">
@@ -38,7 +39,7 @@
                 </li>
               </ul>
             </div>
-    </div>
+   
     <div class="formHolder">
         <div class="col big">
           <input type="text" id="addInput">
@@ -52,14 +53,40 @@
       </div>
     </div>
   </div>
+  <div class="content2">
+      <label class="subtitle">Shared Lists</label>
+      <div class="listHolder">
+        <ul class="list">
+          <li>
+            <span class="listName">Family Shopping</span> 
+          </li>
+          <li>
+            <span class="listName">John Smith's List</span>
+          </li>
+          <li>
+            <span class="listName">College List</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="formHolder">
+        <div class="col big">
+          <input type="text" id="addInput" style="margin-top: 150px;">
+        </div>
+        <div class="col" style="margin-left: 50px; margin-top: 170px;">
+          <button type="button" id="addBtn" class="btn-primary"">Add List</button>
+        </div>
+        </div>
+
+  </div>
   <div class="bottomScreen">
     <hr>
     <div class="iconholders">
-        <img src="./images/homebutton.png">
-        <img src="./images/list.png">
-        <img src="./images/fridgebutton.png">
-        <img src="./images/profilebutton.png">
-        <img src="./images/bookicon.png">
+        <img src="./images/homebutton.png" onclick="goto_home_page()">
+        <img src="./images/list.png" onclick="goto_list_page()">
+        <img src="./images/fridgebutton.png" onclick="goto_fridge_page()">
+        <img src="./images/profilebutton.png" onclick="goto_profile_page()">
+        <img src="./images/bookicon.png" onclick="goto_recipe_page()">
     </div>
 </div>
 </div>
