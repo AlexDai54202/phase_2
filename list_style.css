@@ -2,6 +2,12 @@
     font-family: 'Atkinson Hyperlegible';
     font-size: 25px;
 }
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./TTF/Atkinson-Hyperlegible-Regular-102.ttf');
+}
+
 body {
     position: absolute;
 }
